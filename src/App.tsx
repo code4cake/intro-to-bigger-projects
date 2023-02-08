@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import { Button } from "./Button";
 
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 
 // `https://api.github.com/users/:username`;
@@ -10,6 +9,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <h1 className="">Intro to bigger projects</h1>
       <Button />
     </div>
   );
