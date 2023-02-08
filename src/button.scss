@@ -1,0 +1,10 @@
+@mixin btn-colors {
+  width: 150px;
+  height: 50px;
+  background-color: pink;
+}
+
+.button-scss {
+  @include btn-colors;
+  background-color: red;
+}
