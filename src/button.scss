@@ -1,0 +1,8 @@
+@mixin button-size {
+  height: 50px;
+}
+
+.button-scss {
+  @include button-size();
+  background-color: red;
+}
