@@ -20,4 +20,16 @@ router.get("/", (req: Request, res: Response) => {
     });
 });
 
+router.post("/id", (req: Request, res: Response) => {
+  const { id } = req.body;
+
+  UserController.getById(id)
+    .then((response: {}) => {
+      res.status(200).send(JSON.stringify({ result: "ok", user: response }));
+    })
+    .catch((error: Error) => {
+      res.status(200).send(JSON.stringify({ result: "nok", error }));
+    });
+});
+
 module.exports = router;

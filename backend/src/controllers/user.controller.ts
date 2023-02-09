@@ -14,6 +14,19 @@ const getAllUsers = () =>
       });
   });
 
+const getById = (id: string) => {
+  return new Promise((resolve, reject) => {
+    UserSchema.findOne({ id: id }, (err: unknown, user: any) => {
+      if (user === undefined || user === null) {
+        reject();
+      } else {
+        resolve(user);
+      }
+    });
+  });
+};
+
 module.exports = {
   getAllUsers,
+  getById,
 };
